@@ -14,6 +14,10 @@
 
 ---
 
+- name: Install psycopg2 Python library
+  command: /usr/libexec/platform-python -m pip install psycopg2
+  become: yes
+
 - name: Create Cloudera Manager database user
   postgresql_user:
     name: "{{ cloudera_manager_database_user }}"
