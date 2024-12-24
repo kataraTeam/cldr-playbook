@@ -17,3 +17,7 @@
   package:
     name: python2
     state: present
+    
+- name: Create symbolic link for Python 2
+  command: ln -sf $(which python2) /usr/bin/python
+  become: yes
