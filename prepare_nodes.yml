@@ -69,10 +69,10 @@
   tags:
     - python
 
-- name: Install Python 2 for KTS servers
-  hosts: kts_servers
+- name: Install Python 2 for shell tools
+  hosts: all
   become: yes
   roles:
-    - { role: prereqs/python2 , when: encryption_activated | default('false') }
+    - prereqs/python2
   tags:
     - python
